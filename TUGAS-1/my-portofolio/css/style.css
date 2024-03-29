@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ecf8f8;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+/* header */
+
+.cv {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.cv h1 {
+    margin-bottom: -10px;
+    color: #621708;
+    font-size: 60px;
+}
+
+/* navbar */
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav li :hover {
+    color: #cb997e;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* main */
+.featured-image {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.content {
+    float: left;
+    width: 74%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #d8e2dc;
+    color: #001524;
+}
+
+.card h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.jalur-image {
+    display: flex;
+}
+
+.jalur-image1 {
+    flex: 1;
+}
+
+.jalur-image-2 {
+    flex: 1;
+}
+
+.jalur-image-3 {
+    flex: 1;
+}
+
+.jalur-image img {
+    width: 300px;
+    height: 200px;
+}
+
+.profile-image {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.preset {
+    float: right;
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+
+/* ukuran mobile */
+
+@media screen and (max-width: 1000px) {
+
+
+    /* menu garis 3 */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 20px;
+        height: 4px;
+        background-color: white;
+        border-radius: 3px;
+    }
+
+    nav ul {
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        background-color: #333;
+        padding: 20px;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+    }
+
+    .content, .preset {
+        width: 100%;
+        padding: 0;
+    }
+
+    .featured-image {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .jalur-image {
+        display: block;
+    }
+}
